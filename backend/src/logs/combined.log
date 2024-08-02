@@ -14,3 +14,47 @@
 {"level":"info","message":"Server is running on port 3000","service":"user-service"}
 {"level":"info","message":"Server is running on port 3000","service":"user-service"}
 {"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"error","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"error","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Connected to the database","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Connected to the database","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Connected to the database","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"code":8000,"codeName":"AtlasError","connectionGeneration":0,"errorResponse":{"code":8000,"codeName":"AtlasError","errmsg":"bad auth : Authentication failed.","ok":0},"level":"error","ok":0,"service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Connected to the database","service":"user-service"}
+{"level":"info","message":"Server is running on port 3000","service":"user-service"}
+{"level":"info","message":"Connected to the database","service":"user-service"}

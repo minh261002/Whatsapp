@@ -8,6 +8,7 @@ import compression from 'compression';
 import fileUpload from 'express-fileupload';
 import cors from 'cors';
 import createHttpError from 'http-errors';
+import routes from './routes/index.js';
 
 const app = express();
 dotenv.config();
@@ -24,14 +25,9 @@ app.use(compression());
 app.use(fileUpload({
     useTempFiles: true,
 }));
-app.use(cors({
-    origin: process.env.CLIENT_URL,
-    credentials: true,
-}));
+app.use(cors());
 
-app.get('/', (req, res) => {
-    res.send('Hello World');
-});
+app.use('/api/v1', routes);
 
 app.use(async(req, res, next) => {
     next(createHttpError.NotFound('This route does not exist'));

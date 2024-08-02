@@ -1,7 +1,24 @@
 import app from './app.js';
 import logger from './configs/logger.config.js';
+import mongoose from 'mongoose';
 
 const PORT = process.env.PORT || 3000;
+const {DATABASE_URL} = process.env;
+
+mongoose.connection.on('error', (error) => {
+    logger.error(error);
+    process.exit(1);
+});
+
+if(process.env.NODE_ENV !== 'production'){
+    mongoose.set('debug', true);
+};
+
+mongoose.connect(DATABASE_URL).then(() => {
+    logger.info('Connected to the database');
+}).catch((error) => {
+    logger.error(error);
+});
 
 let server;
 server = app.listen(PORT, () => {
