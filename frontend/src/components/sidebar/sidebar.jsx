@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import SidebarHeader from './sidebar-header'
 import SidebarNotification from './sidebar-notification'
 import Search from './search'
+import Conversations from './conversations'
 
 const SideBar = () => {
     const [searchResutls, setSearchResults] = useState([]);
@@ -10,6 +11,7 @@ const SideBar = () => {
             <SidebarHeader />
             <SidebarNotification />
             <Search searchLength={searchResutls.length} />
+            <Conversations />
         </div>
     )
 }
