@@ -1,10 +1,39 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import { FaArrowLeft, FaSearch } from "react-icons/fa";
 import { IoFilter } from "react-icons/io5";
+import { useSelector } from 'react-redux';
 
-const Search = ({ searchLength }) => {
+const Search = ({ searchLength, setSearchResults }) => {
     const [show, setShow] = useState(false);
-    const handleSearch = (e) => { };
+    const { user } = useSelector((state) => state.user);
+    const { token } = user;
+
+    const handleSearch = async (e) => {
+        if (e.target.value && e.key === 'Enter') {
+            try {
+                const { data } = await axios.get(
+                    `${import.meta.env.VITE_API_ENDPOINT}/user?search=${e.target.value}`,
+                    {
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                        },
+                    }
+                );
+
+                setSearchResults(data);
+            } catch (error) {
+                console.log(error.response.data.error.message);
+            }
+        } else {
+            setSearchResults([]);
+        }
+    };
+
+    const handleCloseSearch = (e) => {
+        setSearchResults([]);
+        document.querySelector('.input').value = '';
+    };
 
     return (
         <div className='h-[49px] py-1.5 '>
@@ -13,7 +42,9 @@ const Search = ({ searchLength }) => {
                     <div className="w-full flex dark:bg-dark_bg_2 rounded-lg pl-2">
                         {show || searchLength > 0 ?
                             (
-                                <span className='w-8 flex items-center justify-center rotateAnimation'>
+                                <span className='w-8 flex items-center justify-center rotateAnimation cursor-pointer'
+                                    onClick={handleCloseSearch}
+                                >
                                     <FaArrowLeft className='fill-green_1 w-5' size={28} />
                                 </span>
                             ) : (
