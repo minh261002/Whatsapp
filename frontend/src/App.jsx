@@ -6,20 +6,20 @@ import { useSelector } from 'react-redux'
 
 const App = () => {
   const { user } = useSelector((state) => state.user);
-  const { access_token } = user;
+  const { token } = user;
 
   return (
     <div className="dark">
       <Router>
         <Routes>
           <Route exact path='/' element={
-            access_token ? <Home /> : <Navigate to='/login' />
+            token ? <Home /> : <Navigate to='/login' />
           } />
           <Route exact path='/login' element={
-            access_token ? <Navigate to='/' /> : <Login />
+            token ? <Navigate to='/' /> : <Login />
           } />
           <Route exact path='/register' element={
-            access_token ? <Navigate to='/' /> : <Register />
+            token ? <Navigate to='/' /> : <Register />
           } />
         </Routes>
       </Router>
